@@ -1,492 +1,950 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="./assets/imgs/icons/favicon.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/showInfo.css">
-    <script src="./assets/js/showInfo.js" type="text/javascript" defer></script>
-    <script src="./assets/js/mouseEffect.js" type="text/javascript" defer></script>
-    <title>My Info</title>
-</head>
-<body>
-    <div id="overlay"><span class="overlay-text">L</span><span class="overlay-text">O</span><span class="overlay-text">A</span><span class="overlay-text">D</span><span class="overlay-text">I</span><span class="overlay-text">N</span><span class="overlay-text">G</span></div>
-    <div id="my-info" class="grid wide">
-        <!-- Header -->
-        <div class="info__header contain">
-            <div class="header__left">
-                <div class="avatar"></div>
-                <div class="right">
-                    <div class="name">Bùi Trung Nghĩa</div>
-                    <div class="description"><i class="fa-solid fa-graduation-cap"></i> Sinh viên</div>
-                    <div class="contact">
-                        <a href="https://www.facebook.com/Nghiadx/"><div class="contact-icon" style="--bgColor: #3B5998"><i class="fab fa-facebook-f"></i><div class="icon-popup">Facebook</div> </div></a>
-                        <a href="https://vt.tiktok.com/ZSdFPxLF3/"><div class="contact-icon" style="--bgColor: black"><i class="fab fa-tiktok"></i><div class="icon-popup">Tiktok</div></div></a>
-                        <a href="http://zaloapp.com/qr/p/5vhfgzoc9y7e"><div class="contact-icon" style="--bgColor: #0A68FE">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48" style=" fill:#000000;"><path fill="#2962ff" d="M15,36V6.827l-1.211-0.811C8.64,8.083,5,13.112,5,19v10c0,7.732,6.268,14,14,14h10	c4.722,0,8.883-2.348,11.417-5.931V36H15z"></path><path fill="#eee" d="M29,5H19c-1.845,0-3.601,0.366-5.214,1.014C10.453,9.25,8,14.528,8,19	c0,6.771,0.936,10.735,3.712,14.607c0.216,0.301,0.357,0.653,0.376,1.022c0.043,0.835-0.129,2.365-1.634,3.742	c-0.162,0.148-0.059,0.419,0.16,0.428c0.942,0.041,2.843-0.014,4.797-0.877c0.557-0.246,1.191-0.203,1.729,0.083	C20.453,39.764,24.333,40,28,40c4.676,0,9.339-1.04,12.417-2.916C42.038,34.799,43,32.014,43,29V19C43,11.268,36.732,5,29,5z"></path><path fill="#2962ff" d="M36.75,27C34.683,27,33,25.317,33,23.25s1.683-3.75,3.75-3.75s3.75,1.683,3.75,3.75	S38.817,27,36.75,27z M36.75,21c-1.24,0-2.25,1.01-2.25,2.25s1.01,2.25,2.25,2.25S39,24.49,39,23.25S37.99,21,36.75,21z"></path><path fill="#2962ff" d="M31.5,27h-1c-0.276,0-0.5-0.224-0.5-0.5V18h1.5V27z"></path><path fill="#2962ff" d="M27,19.75v0.519c-0.629-0.476-1.403-0.769-2.25-0.769c-2.067,0-3.75,1.683-3.75,3.75	S22.683,27,24.75,27c0.847,0,1.621-0.293,2.25-0.769V26.5c0,0.276,0.224,0.5,0.5,0.5h1v-7.25H27z M24.75,25.5	c-1.24,0-2.25-1.01-2.25-2.25S23.51,21,24.75,21S27,22.01,27,23.25S25.99,25.5,24.75,25.5z"></path><path fill="#2962ff" d="M21.25,18h-8v1.5h5.321L13,26h0.026c-0.163,0.211-0.276,0.463-0.276,0.75V27h7.5	c0.276,0,0.5-0.224,0.5-0.5v-1h-5.321L21,19h-0.026c0.163-0.211,0.276-0.463,0.276-0.75V18z"></path></svg>
-                        <div class="icon-popup">Zalo</div></div></a>
-                        <a href="https://www.youtube.com/"><div class="contact-icon" style="--bgColor: #EA4335"><i class="fab fa-youtube"></i><div class="icon-popup">Youtube</div></div></a>
-                    </div>
-                </div>
-            </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			type="image/png"
+			href="./assets/imgs/icons/favicon.png"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./assets/css/grid.css" />
+		<link rel="stylesheet" href="./assets/css/showInfo.css" />
+		<script
+			src="./assets/js/showInfo.js"
+			type="text/javascript"
+			defer
+		></script>
+		<!-- <script
+			src="./assets/js/mouseEffect.js"
+			type="text/javascript"
+			defer
+		></script> -->
+		<title>My Info</title>
+	</head>
+	<body>
+		<div id="overlay">
+			<span class="overlay-text">L</span
+			><span class="overlay-text">O</span
+			><span class="overlay-text">A</span
+			><span class="overlay-text">D</span
+			><span class="overlay-text">I</span
+			><span class="overlay-text">N</span
+			><span class="overlay-text">G</span>
+		</div>
+		<div id="my-info" class="grid wide">
+			<!-- Header -->
+			<div class="info__header contain">
+				<div class="header__left">
+					<div class="avatar"></div>
+					<div class="right">
+						<div class="name">Bùi Trung Nghĩa</div>
+						<div class="description">
+							<i class="fa-solid fa-graduation-cap"></i> Sinh viên
+						</div>
+						<div class="contact">
+							<a href="https://www.facebook.com/Nghiadx/"
+								><div
+									class="contact-icon"
+									style="--bgColor: #3b5998"
+								>
+									<i class="fab fa-facebook-f"></i>
+									<div class="icon-popup">Facebook</div>
+								</div></a
+							>
+							<a href="https://vt.tiktok.com/ZSdFPxLF3/"
+								><div
+									class="contact-icon"
+									style="--bgColor: black"
+								>
+									<i class="fab fa-tiktok"></i>
+									<div class="icon-popup">Tiktok</div>
+								</div></a
+							>
+							<a href="http://zaloapp.com/qr/p/5vhfgzoc9y7e"
+								><div
+									class="contact-icon"
+									style="--bgColor: #0a68fe"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										x="0px"
+										y="0px"
+										viewBox="0 0 48 48"
+										style="fill: #000000"
+									>
+										<path
+											fill="#2962ff"
+											d="M15,36V6.827l-1.211-0.811C8.64,8.083,5,13.112,5,19v10c0,7.732,6.268,14,14,14h10	c4.722,0,8.883-2.348,11.417-5.931V36H15z"
+										></path>
+										<path
+											fill="#eee"
+											d="M29,5H19c-1.845,0-3.601,0.366-5.214,1.014C10.453,9.25,8,14.528,8,19	c0,6.771,0.936,10.735,3.712,14.607c0.216,0.301,0.357,0.653,0.376,1.022c0.043,0.835-0.129,2.365-1.634,3.742	c-0.162,0.148-0.059,0.419,0.16,0.428c0.942,0.041,2.843-0.014,4.797-0.877c0.557-0.246,1.191-0.203,1.729,0.083	C20.453,39.764,24.333,40,28,40c4.676,0,9.339-1.04,12.417-2.916C42.038,34.799,43,32.014,43,29V19C43,11.268,36.732,5,29,5z"
+										></path>
+										<path
+											fill="#2962ff"
+											d="M36.75,27C34.683,27,33,25.317,33,23.25s1.683-3.75,3.75-3.75s3.75,1.683,3.75,3.75	S38.817,27,36.75,27z M36.75,21c-1.24,0-2.25,1.01-2.25,2.25s1.01,2.25,2.25,2.25S39,24.49,39,23.25S37.99,21,36.75,21z"
+										></path>
+										<path
+											fill="#2962ff"
+											d="M31.5,27h-1c-0.276,0-0.5-0.224-0.5-0.5V18h1.5V27z"
+										></path>
+										<path
+											fill="#2962ff"
+											d="M27,19.75v0.519c-0.629-0.476-1.403-0.769-2.25-0.769c-2.067,0-3.75,1.683-3.75,3.75	S22.683,27,24.75,27c0.847,0,1.621-0.293,2.25-0.769V26.5c0,0.276,0.224,0.5,0.5,0.5h1v-7.25H27z M24.75,25.5	c-1.24,0-2.25-1.01-2.25-2.25S23.51,21,24.75,21S27,22.01,27,23.25S25.99,25.5,24.75,25.5z"
+										></path>
+										<path
+											fill="#2962ff"
+											d="M21.25,18h-8v1.5h5.321L13,26h0.026c-0.163,0.211-0.276,0.463-0.276,0.75V27h7.5	c0.276,0,0.5-0.224,0.5-0.5v-1h-5.321L21,19h-0.026c0.163-0.211,0.276-0.463,0.276-0.75V18z"
+										></path>
+									</svg>
+									<div class="icon-popup">Zalo</div>
+								</div></a
+							>
+							<a href="https://www.youtube.com/"
+								><div
+									class="contact-icon"
+									style="--bgColor: #ea4335"
+								>
+									<i class="fab fa-youtube"></i>
+									<div class="icon-popup">Youtube</div>
+								</div></a
+							>
+						</div>
+					</div>
+				</div>
 
-            <div class="header__right">
+				<div class="header__right">
+					<div class="row">
+						<div class="info-right col l-8 m-8 s-12">
+							<div class="name">Email</div>
+							<div class="description">anghiadx@gmail.com</div>
+						</div>
+						<div class="info-right col l-4 m-4 s-12">
+							<div class="name">Ngày sinh</div>
+							<div class="description">25/12/2000</div>
+						</div>
+					</div>
 
-                <div class="row">
-                    <div class="info-right col l-8 m-8 s-12">
-                        <div class="name">Email</div>
-                        <div class="description">anghiadx@gmail.com</div>
-                    </div>
-                    <div class="info-right col l-4 m-4 s-12">
-                        <div class="name">Ngày sinh</div>
-                        <div class="description">25/12/2000</div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="info-right col l-8 m-8 s-12">
-                        <div class="name">Số điện thoại</div>
-                        <div class="description">0339xxx336</div>
-                    </div>
-                    <div class="info-right col l-4 m-4 s-12">
-                        <div class="name">Quê hương</div>
-                        <div class="description">Thái Bình</div>
-                    </div>
-                </div>
-                    
+					<div class="row">
+						<div class="info-right col l-8 m-8 s-12">
+							<div class="name">Số điện thoại</div>
+							<div class="description">0339xxx336</div>
+						</div>
+						<div class="info-right col l-4 m-4 s-12">
+							<div class="name">Quê hương</div>
+							<div class="description">Thái Bình</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            </div>
-        </div>
+			<!-- Body -->
+			<div class="info__body row">
+				<div class="col l-2 m-12 s-12">
+					<ul id="nav" class="contain">
+						<li class="nav-item active">
+							<script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+							<lord-icon
+								src="https://cdn.lordicon.com/dxjqoygy.json"
+								trigger="morph"
+								style="width: 50px; height: 50px"
+							>
+							</lord-icon>
+							<div class="title">Bản thân</div>
+						</li>
+						<li class="nav-item">
+							<script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+							<lord-icon
+								src="https://cdn.lordicon.com/wxnxiano.json"
+								trigger="morph"
+								style="width: 50px; height: 50px"
+							>
+							</lord-icon>
+							<div class="title">Học vấn</div>
+						</li>
+						<li class="nav-item">
+							<script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+							<lord-icon
+								src="https://cdn.lordicon.com/hpxruznz.json"
+								trigger="morph"
+								style="width: 50px; height: 50px"
+							>
+							</lord-icon>
+							<div class="title">Mục tiêu</div>
+						</li>
+						<li class="nav-item">
+							<script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+							<lord-icon
+								src="https://cdn.lordicon.com/rjzlnunf.json"
+								trigger="morph"
+								style="width: 50px; height: 50px"
+							>
+							</lord-icon>
+							<div class="title">Sở thích</div>
+						</li>
+					</ul>
+				</div>
 
-        <!-- Body -->
-        <div class="info__body row">
-            <div class="col l-2 m-12 s-12">
-                <ul id="nav" class="contain">
-                    <li class="nav-item active">
-                        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/dxjqoygy.json"
-                            trigger="morph"
-                            style="width:50px;height:50px">
-                        </lord-icon>
-                        <div class="title">Bản thân</div>
-                    </li>
-                    <li class="nav-item">
-                        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/wxnxiano.json"
-                            trigger="morph"
-                            style="width:50px;height:50px">
-                        </lord-icon>
-                        <div class="title">Học vấn</div>
-                    </li>
-                    <li class="nav-item">
-                        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/hpxruznz.json"
-                            trigger="morph"
-                            style="width:50px;height:50px">
-                        </lord-icon>
-                        <div class="title">Mục tiêu</div>
-                    </li>
-                    <li class="nav-item">
-                        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/rjzlnunf.json"
-                            trigger="morph"
-                            style="width:50px;height:50px">
-                        </lord-icon>
-                        <div class="title">Sở thích</div>
-                    </li>
-                </ul>
-            </div>
+				<div class="col l-10 m-12 s-12">
+					<div id="content" class="contain">
+						<!-- Bản thân -->
+						<div class="content-item active">
+							<div class="sub-item">
+								<h1 class="big-title">Giới thiệu</h1>
+								<p>
+									Mình tên là Nghĩa, hiện tại đang là sinh
+									viên của trường ĐH Công Nghệp Hà Nội và học
+									chuyên ngành Công Nghệ Thông Tin.
+								</p>
+								<p>
+									Thời gian gần đây mình tình cờ biết đến
+									trang F8, các video ở đây dạy rất tận tâm và
+									dễ hiểu. Sau 1 khoảng thời gian học tập tại
+									đây, mình đã hoàn thành khóa JavaScript căn
+									bản và sẽ tiếp tục học các khóa khác để vươn
+									tới mục tiêu có thể thực tập và đi làm trong
+									tương lai!
+								</p>
+							</div>
+							<div class="sub-item">
+								<h2 class="small-title">Sản phẩm của mình</h2>
+								<div class="row">
+									<div class="col l-6 m-6 s-12">
+										<div class="i-did">
+											<a href="https://tiktok.nghiane.cf/"
+												><div class="img">
+													<img
+														src="./assets/imgs/idid/tiktokUI.png"
+														alt="TikTok Clone"
+													/></div
+											></a>
+											<h3 class="title">TikTok Clone</h3>
+										</div>
+									</div>
+									<div class="col l-6 m-6 s-12">
+										<div class="i-did">
+											<a
+												href="https://nghiane.cf/products/music-player"
+												><div class="img">
+													<img
+														src="./assets/imgs/idid/musicPlayer.png"
+														alt="Music Player"
+													/></div
+											></a>
+											<h3 class="title">Music Player</h3>
+										</div>
+									</div>
+									<div class="col l-6 m-6 s-12">
+										<div class="i-did">
+											<a
+												href="https://nghiane.cf/products/book-card"
+												><div class="img">
+													<img
+														src="./assets/imgs/idid/bookCard.png"
+														alt="Form Validation"
+													/></div
+											></a>
+											<h3 class="title">Book Card</h3>
+										</div>
+									</div>
+									<div class="col l-6 m-6 s-12">
+										<div class="i-did">
+											<a
+												href="https://nghiane.cf/products/the-band"
+												><div class="img">
+													<img
+														src="./assets/imgs/idid/theBand.png"
+														alt="The Band"
+													/></div
+											></a>
+											<h3 class="title">The Band</h3>
+										</div>
+									</div>
+									<div class="col l-6 m-6 s-12">
+										<div class="i-did">
+											<a
+												href="https://nghiane.cf/products/cay-canh-mini"
+												><div class="img">
+													<img
+														src="./assets/imgs/idid/cayCanhMini.png"
+														alt="Cây Cảnh Mini"
+													/></div
+											></a>
+											<h3 class="title">Cây Cảnh Mini</h3>
+										</div>
+									</div>
+									<div class="col l-6 m-6 s-12">
+										<div class="i-did">
+											<a
+												href="https://nghiane.cf/products/new-year"
+												><div class="img">
+													<img
+														src="./assets/imgs/idid/happyNewYear2022.png"
+														alt="Happy New Year"
+													/></div
+											></a>
+											<h3 class="title">
+												Happy New Year
+											</h3>
+										</div>
+									</div>
+									<div class="col l-6 m-6 s-12">
+										<div class="i-did">
+											<a
+												href="https://nghiane.cf/products/cam-sung-tool"
+												><div class="img">
+													<img
+														src="./assets/imgs/idid/textIcon.png"
+														alt="Cắm Sừng Tool"
+													/></div
+											></a>
+											<h3 class="title">Cắm Sừng Tool</h3>
+										</div>
+									</div>
+									<div class="col l-6 m-6 s-12">
+										<div class="i-did">
+											<a
+												href="https://nghiane.cf/products/clock"
+												><div class="img">
+													<img
+														src="./assets/imgs/idid/clock.png"
+														alt="Clock"
+													/></div
+											></a>
+											<h3 class="title">Đồng Hồ</h3>
+										</div>
+									</div>
+								</div>
+							</div>
 
-            <div class="col l-10 m-12 s-12">
-                <div id="content" class="contain">
+							<div class="sub-item">
+								<h2 class="small-title">
+									Những câu nói cho mình cảm hứng
+								</h2>
 
-                    <!-- Bản thân -->
-                    <div class="content-item active">
-                        <div class="sub-item">
-                            <h1 class="big-title">Giới thiệu</h1>
-                            <p>Mình tên là Nghĩa, hiện tại đang là sinh viên của trường ĐH Công Nghệp Hà Nội và học chuyên ngành Công Nghệ Thông Tin.
-                            </p>
-                            <p>Thời gian gần đây mình tình cờ biết đến trang F8, các video ở đây dạy rất tận tâm và dễ hiểu. Sau 1 khoảng thời gian 
-                                học tập tại đây, mình đã hoàn thành khóa JavaScript căn bản và sẽ tiếp tục học các khóa khác để vươn tới mục tiêu 
-                                có thể thực tập và đi làm trong tương lai!
-                            </p>
-                            
-                        </div>
-                        <div class="sub-item">
-                            <h2 class="small-title">Sản phẩm của mình</h2>
-                            <div class="row">
-                                <div class="col l-6 m-6 s-12">
-                                    <div class="i-did">
-                                        <a href="https://nghiane.cf/products/the-band"><div class="img"><img src="./assets/imgs/idid/theBand.png" alt="The Band"></div></a>
-                                        <h3 class="title">
-                                            The Band
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col l-6 m-6 s-12">
-                                    <div class="i-did">
-                                        <a href="https://nghiane.cf/products/music-player"><div class="img"><img src="./assets/imgs/idid/musicPlayer.png" alt="Music Player"></div></a>
-                                        <h3 class="title">
-                                            Music Player
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col l-6 m-6 s-12">
-                                    <div class="i-did">
-                                        <a href="https://nghiane.cf/products/book-card"><div class="img"><img src="./assets/imgs/idid/bookCard.png" alt="Form Validation"></div></a>
-                                        <h3 class="title">
-                                            Book Card
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col l-6 m-6 s-12">
-                                    <div class="i-did">
-                                        <a href="https://nghiane.cf/products/new-year"><div class="img"><img src="./assets/imgs/idid/happyNewYear2022.png" alt="Happy New Year"></div></a>
-                                        <h3 class="title">
-                                            Happy New Year
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col l-6 m-6 s-12">
-                                    <div class="i-did">
-                                        <a href="https://nghiane.cf/products/cam-sung-tool"><div class="img"><img src="./assets/imgs/idid/textIcon.png" alt="Cắm Sừng Tool"></div></a>
-                                        <h3 class="title">
-                                            Cắm Sừng Tool
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col l-6 m-6 s-12">
-                                    <div class="i-did">
-                                        <a href="https://nghiane.cf/products/cay-canh-mini"><div class="img"><img src="./assets/imgs/idid/cayCanhMini.png" alt="Cây Cảnh Mini"></div></a>
-                                        <h3 class="title">
-                                            Cây Cảnh Mini
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+								<div class="slider">
+									<div class="slide-main">
+										<div class="slide-bar">
+											<div class="slide-item">
+												<div
+													class="avatar"
+													style="
+														background-image: url('./assets/imgs/slider/bill-gates.jpg');
+													"
+												></div>
+												<div class="content">
+													<h3>Bill Gates</h3>
+													<p>
+														Tôi chọn người lười
+														biếng để làm những việc
+														khó khăn. Bởi một người
+														lười biếng sẽ tìm ra
+														cách dễ dàng để làm việc
+														đó.
+													</p>
+												</div>
+											</div>
 
-                        <div class="sub-item">
-                            <h2 class="small-title">Những câu nói cho mình cảm hứng</h2>
+											<div class="slide-item">
+												<div
+													class="avatar"
+													style="
+														background-image: url('./assets/imgs/slider/anhson.jpg');
+													"
+												></div>
+												<div class="content">
+													<h3>Anh Sơn</h3>
+													<p>
+														Hãy bình tĩnh để xây
+														dựng một nền móng thật
+														chắc! Người nào không có
+														móng chắc, lên được
+														khoảng 20 tầng thôi
+														không xây được tiếp
+														đâu... cố xây tiếp...
+														SẬP!
+													</p>
+												</div>
+											</div>
 
-                            <div class="slider">
-                                <div class="slide-main">
-                                    <div class="slide-bar">
+											<div class="slide-item">
+												<div
+													class="avatar"
+													style="
+														background-image: url('./assets/imgs/slider/mark-zuckerberg.jpg');
+													"
+												></div>
+												<div class="content">
+													<h3>Mark Zuckerberg</h3>
+													<p>
+														Di chuyển nhanh và phá
+														vỡ các quy tắc. Nếu vẫn
+														chưa phá vỡ cái gì,
+														chứng tỏ bạn di chuyển
+														chưa đủ nhanh.
+													</p>
+												</div>
+											</div>
 
-                                        <div class="slide-item">
-                                            <div class="avatar" style="background-image: url('./assets/imgs/slider/bill-gates.jpg')"></div>
-                                            <div class="content">
-                                                <h3>Bill Gates</h3>
-                                                <p>Tôi chọn người lười biếng để làm những việc khó khăn. Bởi một người lười biếng sẽ tìm ra cách dễ dàng để làm việc đó.</p>
-                                            </div>
-                                        </div>
+											<div class="slide-item">
+												<div
+													class="avatar"
+													style="
+														background-image: url('./assets/imgs/slider/warren.jpg');
+													"
+												></div>
+												<div class="content">
+													<h3>
+														Warren Edward Buffett
+													</h3>
+													<p>
+														Khi một người được ngồi
+														trong bóng mát ngày hôm
+														nay thì đó là vì ai đó
+														đã trồng 1 cái cây từ
+														trước đó rất lâu.
+													</p>
+												</div>
+											</div>
 
-                                        <div class="slide-item">
-                                            <div class="avatar" style="background-image: url('./assets/imgs/slider/anhson.jpg')"></div>
-                                            <div class="content">
-                                                <h3>Anh Sơn</h3>
-                                                <p>Hãy bình tĩnh để xây dựng một nền móng thật chắc! Người nào không có móng chắc, lên được khoảng 20 tầng thôi không xây được tiếp đâu...
-                                                    cố xây tiếp... SẬP!
-                                                </p>
-                                            </div>
-                                        </div>
+											<div class="slide-item">
+												<div
+													class="avatar"
+													style="
+														background-image: url('./assets/imgs/slider/bill-gates.jpg');
+													"
+												></div>
+												<div class="content">
+													<h3>Bill Gates</h3>
+													<p>
+														Tôi chọn người lười
+														biếng để làm những việc
+														khó khăn. Bởi một người
+														lười biếng sẽ tìm ra
+														cách dễ dàng để làm việc
+														đó.
+													</p>
+												</div>
+											</div>
 
-                                        <div class="slide-item">
-                                            <div class="avatar" style="background-image: url('./assets/imgs/slider/mark-zuckerberg.jpg')"></div>
-                                            <div class="content">
-                                                <h3>Mark Zuckerberg</h3>
-                                                <p>Di chuyển nhanh và phá vỡ các quy tắc. Nếu vẫn chưa phá vỡ cái gì, chứng tỏ bạn di chuyển chưa đủ nhanh.</p>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="slide-item">
-                                            <div class="avatar" style="background-image: url('./assets/imgs/slider/warren.jpg')"></div>
-                                            <div class="content">
-                                                <h3>Warren Edward Buffett</h3>
-                                                <p>Khi một người được ngồi trong bóng mát ngày hôm nay thì đó là vì ai đó đã trồng 1 cái cây từ trước đó rất lâu.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-item">
-                                            <div class="avatar" style="background-image: url('./assets/imgs/slider/bill-gates.jpg')"></div>
-                                            <div class="content">
-                                                <h3>Bill Gates</h3>
-                                                <p>Tôi chọn người lười biếng để làm những việc khó khăn. Bởi một người lười biếng sẽ tìm ra cách dễ dàng để làm việc đó.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="slide-item">
-                                            <div class="avatar" style="background-image: url('./assets/imgs/slider/anhson.jpg')"></div>
-                                            <div class="content">
-                                                <h3>Anh Sơn</h3>
-                                                <p>Hãy bình tĩnh để xây dựng một nền móng thật chắc! Người nào không có móng chắc, lên được khoảng 20 tầng thôi không xây được tiếp đâu...
-                                                    cố xây tiếp... SẬP!
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="slide-dot">
-                                    <!-- <span class="dot active"></span>
+											<div class="slide-item">
+												<div
+													class="avatar"
+													style="
+														background-image: url('./assets/imgs/slider/anhson.jpg');
+													"
+												></div>
+												<div class="content">
+													<h3>Anh Sơn</h3>
+													<p>
+														Hãy bình tĩnh để xây
+														dựng một nền móng thật
+														chắc! Người nào không có
+														móng chắc, lên được
+														khoảng 20 tầng thôi
+														không xây được tiếp
+														đâu... cố xây tiếp...
+														SẬP!
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slide-dot">
+										<!-- <span class="dot active"></span>
                                     <span class="dot"></span>
                                     <span class="dot"></span> -->
-                                </div>
-                                <div id="prev-slide"><i class="fas fa-angle-left"></i></div>
-                                <div id="next-slide"><i class="fas fa-angle-right"></i></div>
-                            </div>
+									</div>
+									<div id="prev-slide">
+										<i class="fas fa-angle-left"></i>
+									</div>
+									<div id="next-slide">
+										<i class="fas fa-angle-right"></i>
+									</div>
+								</div>
+							</div>
+						</div>
 
-                        </div>
-                    </div>
+						<!-- Học vấn -->
 
-                    <!-- Học vấn -->
+						<div class="content-item">
+							<div class="sub-item">
+								<h1 class="big-title">Học vấn</h1>
+								<h2 class="icon-title">
+									<img
+										src="./assets/imgs/icons/education.png"
+										alt=""
+										class=""
+									/>
+									Giáo dục
+								</h2>
 
-                    <div class="content-item">
-                        <div class="sub-item">
-                            <h1 class="big-title">Học vấn</h1>
-                            <h2 class="icon-title">
-                                <img src="./assets/imgs/icons/education.png" alt="" class="">
-                                Giáo dục
-                            </h2>
+								<div class="timeline">
+									<h4 class="title">
+										Trường Đại Học Công Nghiệp Hà Nội
+									</h4>
+									<div class="time">2018</div>
+									<p>
+										Sau khi tốt nghiệp cấp 3, mình chưa có
+										định hướng tiếp theo sẽ học gì làm gì.
+										Đúng vào thời điểm này thì mình biết đến
+										câu chuyện về một
+										<span class="text-popup"
+											>người anh sinh năm 96 học Cơ khí -
+											Bách Khoa</span
+										>. Vì quá ngưỡng mộ nghị lực phi thường
+										của anh nên mình đã quyết định và chính
+										thức trở thành tân sinh viên HAUI,
+										chuyên ngành CNTT vào năm 2018.
+									</p>
+								</div>
+								<div class="timeline">
+									<h4 class="title">Học tập tại F8</h4>
+									<div class="time">Đầu 2022 - nay</div>
+									<p>
+										Thời gian gần đây mình tình cờ biết đến
+										<strong>F8</strong> - là trang dạy lập
+										trình web có lộ trình mà lại hoàn toàn
+										miễn phí. Sau khi học tập tại đây một
+										thời gian mình cảm thấy được trau dồi
+										thêm rất nhiều kiến thức mà mình đã bị
+										hổng bấy lâu nay... Rất cảm ơn anh Sơn
+										là người đã tạo ra trang web này, và nếu
+										ai đang có ý định theo đuổi lập trình
+										web hãy thử đến <strong>F8</strong> một
+										lần nhé!
+									</p>
+								</div>
+							</div>
 
-                            <div class="timeline">
-                                <h4 class="title">Trường Đại Học Công Nghiệp Hà Nội</h4>
-                                <div class="time">2018</div>
-                                <p>Sau khi tốt nghiệp cấp 3, mình chưa có định hướng tiếp theo sẽ học gì làm gì. Đúng vào thời điểm này thì mình biết đến câu chuyện về một 
-                                <span class="text-popup">người anh sinh năm 96 học Cơ khí - Bách Khoa</span>. Vì quá ngưỡng mộ nghị lực phi thường của anh nên mình đã quyết định và chính thức trở thành tân sinh viên HAUI, chuyên ngành CNTT vào năm 2018.</p>
-                            </div>
-                            <div class="timeline">
-                                <h4 class="title">Học tập tại F8</h4>
-                                <div class="time">Đầu 2022 - nay</div>
-                                <p>Thời gian gần đây mình tình cờ biết đến <strong>F8</strong> - là trang dạy lập trình web có lộ trình mà lại hoàn toàn miễn phí. Sau khi học tập tại đây một thời gian mình cảm thấy được trau dồi thêm rất nhiều kiến thức mà mình đã bị hổng bấy lâu nay... 
-                                    Rất cảm ơn anh Sơn là người đã tạo ra trang web này, và nếu ai đang có ý định theo đuổi lập trình web hãy thử đến <strong>F8</strong>  một lần nhé! </p>
+							<div class="sub-item">
+								<h2 class="icon-title">
+									<img
+										src="./assets/imgs/icons/exp.png"
+										alt=""
+										class=""
+									/>
+									Kiến thức
+								</h2>
 
-                            </div>
-                        </div>
+								<div class="timeline">
+									<h4 class="title">HTML</h4>
+									<div class="time">
+										HyperText Markup Language
+									</div>
+									<p>
+										HTML được dịch là "Ngôn ngữ đánh dấu
+										siêu văn bản", nó được dùng để tạo ra
+										các tài liệu hiện thị được trên trình
+										duyệt. HTML gọi là ngôn ngữ nhưng nó
+										không giống như các ngôn ngữ kịch bản
+										hay ngôn ngữ lập trình (sử dụng các kịch
+										bản để thi hành các tác vụ), ngôn ngữ
+										đánh dấu HTML lại sử dụng các thẻ để xác
+										định nội dung của trang.
+									</p>
+								</div>
+								<div class="timeline">
+									<h4 class="title">CSS</h4>
+									<div class="time">
+										Cascading Style Sheets
+									</div>
+									<p>
+										CSS là một ngôn ngữ được sử dụng để tìm
+										và định dạng lại các phần tử được tạo ra
+										bởi ngôn ngữ đánh dấu (HTML). Nói ngắn
+										gọn hơn là ngôn ngữ tạo phong cách cho
+										trang web.
+									</p>
+								</div>
+								<div class="timeline">
+									<h4 class="title">JS</h4>
+									<div class="time">JavaScript</div>
+									<p>
+										Javascript là một ngôn ngữ lập trình
+										kịch bản được sử dụng rộng rãi trong các
+										ứng dụng Website và được hỗ trợ hầu như
+										trên tất cả các trình duyệt trên cả máy
+										tính lẫn điện thoại. Nhiệm vụ của
+										Javascript là xử lý những đối tượng HTML
+										trên trình duyệt. Nó có thể can thiệp
+										với các hành động như thêm / xóa / sửa
+										các thuộc tính CSS và các thẻ HTML một
+										cách dễ dàng.
+									</p>
+								</div>
+								<div class="timeline">
+									<h4 class="title">PHP</h4>
+									<div class="time">
+										Hypertext Preprocessor
+									</div>
+									<p>
+										PHP là ngôn ngữ lập trình được sử dụng
+										để xây dựng các website hay ứng dụng web
+										và làm việc trên server với nhiệm vụ là
+										kết nối cơ sở dữ liệu và thực hiện các
+										các chức năng của web hoặc ứng dụng web.
+										PHP cực kỳ phổ biến khi phát triển
+										website và các ứng dụng Web do khả năng
+										tương thích cao với các trình duyệt và
+										là một ngôn ngữ mềm dẻo linh hoạt khi
+										giải quyết các vấn đề.
+									</p>
+								</div>
+							</div>
 
-                        <div class="sub-item">
-                            <h2 class="icon-title">
-                                <img src="./assets/imgs/icons/exp.png" alt="" class="">
-                                Kiến thức
-                            </h2>
+							<div class="sub-item">
+								<h2 class="icon-title">Kỹ năng của tôi</h2>
+								<div class="skill">
+									<div
+										class="skill-progress"
+										style="
+											--skill-name: 'HTML';
+											--skill-percent: '60%';
+											--percent: 60%;
+										"
+									></div>
+									<div
+										class="skill-progress"
+										style="
+											--skill-name: 'CSS';
+											--skill-percent: '40%';
+											--percent: 40%;
+										"
+									></div>
+									<div
+										class="skill-progress"
+										style="
+											--skill-name: 'JS';
+											--skill-percent: '30%';
+											--percent: 30%;
+										"
+									></div>
+									<div
+										class="skill-progress"
+										style="
+											--skill-name: 'PHP';
+											--skill-percent: '15%';
+											--percent: 15%;
+										"
+									></div>
+								</div>
+							</div>
+						</div>
 
-                            <div class="timeline">
-                                <h4 class="title">HTML</h4>
-                                <div class="time">HyperText Markup Language</div>
-                                <p>HTML được dịch là "Ngôn ngữ đánh dấu siêu văn bản", 
-                                    nó được dùng để tạo ra các tài liệu hiện thị được trên trình duyệt. 
-                                    HTML gọi là ngôn ngữ nhưng nó không giống như các ngôn ngữ kịch bản hay 
-                                    ngôn ngữ lập trình (sử dụng các kịch bản để thi hành các tác vụ), 
-                                    ngôn ngữ đánh dấu HTML lại sử dụng các thẻ để xác định nội dung của trang.</p>
-                            </div>
-                            <div class="timeline">
-                                <h4 class="title">CSS</h4>
-                                <div class="time">Cascading Style Sheets</div>
-                                <p>CSS là một ngôn ngữ được sử dụng để tìm và định dạng lại các phần tử được tạo ra bởi ngôn ngữ đánh dấu (HTML).
-                                     Nói ngắn gọn hơn là ngôn ngữ tạo phong cách cho trang web.</p>
-                            </div>
-                            <div class="timeline">
-                                <h4 class="title">JS</h4>
-                                <div class="time">JavaScript</div>
-                                <p>Javascript là một ngôn ngữ lập trình kịch bản được sử dụng rộng rãi trong các ứng dụng Website và 
-                                    được hỗ trợ hầu như trên tất cả các trình duyệt trên cả máy tính lẫn điện thoại.
-                                    Nhiệm vụ của Javascript là xử lý những đối tượng HTML trên trình duyệt. 
-                                    Nó có thể can thiệp với các hành động như thêm / xóa / sửa các thuộc tính CSS và các thẻ HTML một cách dễ dàng.
-                                </p>
-                            </div>
-                            <div class="timeline">
-                                <h4 class="title">PHP</h4>
-                                <div class="time">Hypertext Preprocessor</div>
-                                <p>PHP là ngôn ngữ lập trình được sử dụng để xây dựng các website hay ứng dụng web và
-                                    làm việc trên server với nhiệm vụ là kết nối cơ sở dữ liệu và thực hiện các các chức năng của web hoặc ứng dụng web. 
-                                    PHP cực kỳ phổ biến khi phát triển website và các ứng dụng Web do khả năng tương thích cao 
-                                    với các trình duyệt và là một ngôn ngữ mềm dẻo linh hoạt khi giải quyết các vấn đề.
+						<!-- Muc tieu -->
+						<div class="content-item">
+							<div class="sub-item">
+								<h1 class="big-title">Mục tiêu</h1>
+								<h2 class="small-title">Ngắn hạn</h2>
 
-                                </p>
-                            </div>
-                        </div>
+								<div class="timeline">
+									<h4 class="title">
+										Viết một trang web tĩnh
+									</h4>
+									<div class="time">06/2022</div>
+									<p>
+										Kết hợp kiến thức HTML, CSS, JS căn bản
+										đã học để xây dựng 1 project cá nhân
+									</p>
+								</div>
 
-                        <div class="sub-item">
-                            <h2 class="icon-title">Kỹ năng của tôi</h2>
-                            <div class="skill">
-                                <div class="skill-progress" style="--skill-name: 'HTML'; --skill-percent: '60%'; --percent: 60%"></div>
-                                <div class="skill-progress" style="--skill-name: 'CSS'; --skill-percent: '40%'; --percent: 40%"></div>
-                                <div class="skill-progress" style="--skill-name: 'JS'; --skill-percent: '30%'; --percent: 30%"></div>
-                                <div class="skill-progress" style="--skill-name: 'PHP'; --skill-percent: '15%'; --percent: 15%"></div>
-                            </div>
-                        </div>
+								<div class="timeline">
+									<h4 class="title">Học JS nâng cao</h4>
+									<div class="time">07/2022</div>
+									<p>
+										Nhận thấy việc chỉ học các kiến thức về
+										JS căn bản là chưa đủ vì vậy mình sẽ
+										tiếp tục tập trung học khóa JS nâng cao
+										và mục tiêu hoàn thành nó trong tháng 7.
+									</p>
+								</div>
 
-                    </div>
+								<div class="timeline">
+									<h4 class="title">Học ReactJS</h4>
+									<div class="time">08/2022</div>
+									<p>
+										React là một thư viện UI phát triển tại
+										Facebook để hỗ trợ việc xây dựng những
+										thành phần (components) UI có tính tương
+										tác cao, có trạng thái và có thể sử dụng
+										lại được.
+									</p>
+								</div>
 
-                    <!-- Muc tieu -->
-                    <div class="content-item">
-                        <div class="sub-item">
-                            <h1 class="big-title">Mục tiêu</h1>
-                            <h2 class="small-title">Ngắn hạn</h2>
+								<div class="timeline">
+									<h4 class="title">Học Tiếng Anh</h4>
+									<div class="time">
+										Song song với học code
+									</div>
+									<p>
+										Tiếng anh là ngôn ngữ của toàn thế giới.
+										Trong lập trình, tiếng anh cũng đóng vai
+										trò quan trọng không kém những kiến thức
+										về code bởi đa số các tài liệu hay thậm
+										chí việc viết code hằng ngày của chúng
+										ta đều phải giao tiếp với Tiếng Anh.
+										Nhận thấy khả năng Tiếng Anh hiện tại
+										chưa được tốt và phải nghiêm túc khắc
+										phục nên mình sẽ dành thời gian hợp lý
+										song song với việc học code để bổ sung
+										thêm kiến thức về Tiếng Anh. Mục tiêu là
+										có thể đọc hiểu các tài liệu về Tiếng
+										Anh chuyên ngành.
+									</p>
+								</div>
 
-                            <div class="timeline">
-                                <h4 class="title">Viết một trang web tĩnh</h4>
-                                <div class="time">06/2022</div>
-                                <p>Kết hợp kiến thức HTML, CSS, JS căn bản đã học để xây dựng 1 project cá nhân</p>
-                            </div>
+								<div class="timeline">
+									<h4 class="title">Thực hành</h4>
+									<div class="time">Trong quá trình học</div>
+									<p>
+										Trong quá trình học, mình sẽ áp dụng
+										những kiến thức đã học và làm các
+										project nhỏ để rèn luyện thêm kỹ năng,
+										từ đó rút ra những kinh nghiệm và khắc
+										phục những thiếu sót của bản thân.
+									</p>
+								</div>
+							</div>
 
-                            <div class="timeline">
-                                <h4 class="title">Học JS nâng cao</h4>
-                                <div class="time">07/2022</div>
-                                <p>Nhận thấy việc chỉ học các kiến thức về JS căn bản là chưa đủ vì vậy mình sẽ tiếp tục tập trung học khóa
-                                     JS nâng cao và mục tiêu hoàn thành nó trong tháng 7.
-                                </p>
-                            </div>
+							<div class="sub-item">
+								<h2 class="small-title">
+									Khi ổn định kiến thức
+								</h2>
+								<div class="timeline">
+									<h4 class="title">Đi thực tập</h4>
+									<div class="time">
+										Khi ổn định kiến thức
+									</div>
+									<p>
+										Sau khi đã nắm được đủ lượng kiến thức
+										nền tảng, mình sẽ xin đi thực tập thực
+										tế tại các công ty. Việc đi thực tập sẽ
+										là cơ hội giúp mình va chạm và rắn rỏi
+										hơn, hiểu rõ hơn về cách làm việc trong
+										môi trường doanh nghiệp từ đó cũng sẽ
+										giúp mình đúc kết ra những kinh nghiệm
+										và khắc phục những thiếu sót của bản
+										thân.
+									</p>
+								</div>
+							</div>
+						</div>
 
-                            <div class="timeline">
-                                <h4 class="title">Học ReactJS</h4>
-                                <div class="time">08/2022</div>
-                                <p>React là một thư viện UI phát triển tại Facebook để hỗ trợ việc xây dựng những thành phần (components)
-                                    UI có tính tương tác cao, có trạng thái và có thể sử dụng lại được.</p>
-                            </div>
+						<!-- Sở thích -->
+						<div class="content-item favourite">
+							<div class="sub-item">
+								<h1 class="big-title">Sở thích</h1>
+								<h2 class="icon-title">
+									<img
+										src="./assets/imgs/icons/game.png"
+										alt=""
+									/>
+									Chơi game
+								</h2>
+								<a href="https://lienquan.garena.vn/"
+									><div class="entertain">
+										<div
+											class="avatar"
+											style="
+												background-image: url('./assets/imgs/entertain/lqm.jpg');
+											"
+										></div>
+										<div class="content">
+											<h3>Liên Quân Mobile</h3>
+											<p>
+												Liên quân mobile là tựa game
+												moba trên nền tảng di động rất
+												phổ biến và được ưa chuộng tại
+												Việt Nam. Tựa game này mang tính
+												chiến thuật và giải trí cao,
+												song cũng rất dễ gây trầm cảm
+												... :')
+											</p>
+										</div>
+									</div></a
+								>
+								<a href="https://pubgm.zing.vn/"
+									><div class="entertain">
+										<div
+											class="avatar"
+											style="
+												background-image: url('./assets/imgs/entertain/pubgm.jpg');
+											"
+										></div>
+										<div class="content">
+											<h3>Pubg Mobile</h3>
+											<p>
+												Pubg Mobile là game sinh tồn bắn
+												súng fps trên di động, trò chơi
+												này không dành cho người có tiền
+												sử bệnh tim.. và nếu bạn muốn
+												thử cảm giác hóa thân thành
+												những chú rắn thì hãy thử trò
+												chơi này.
+											</p>
+										</div>
+									</div></a
+								>
+								<a href="http://aumobile.vn/"
+									><div class="entertain">
+										<div
+											class="avatar"
+											style="
+												background-image: url('./assets/imgs/entertain/auMobile.png');
+											"
+										></div>
+										<div class="content">
+											<h3>Au Mobile</h3>
+											<p>
+												Tựa game thời trang nhảy nhót,
+												lắc cái đầu để cho sạch gầu...
+											</p>
+										</div>
+									</div></a
+								>
+							</div>
 
-                            <div class="timeline">
-                                <h4 class="title">Học Tiếng Anh</h4>
-                                <div class="time">Song song với học code</div>
-                                <p>Tiếng anh là ngôn ngữ của toàn thế giới. Trong lập trình, tiếng anh cũng đóng vai trò quan trọng không kém những kiến
-                                    thức về code bởi đa số các tài liệu hay thậm chí việc viết code hằng ngày của chúng ta đều phải giao tiếp với
-                                    Tiếng Anh. Nhận thấy khả năng Tiếng Anh hiện tại chưa được tốt và phải nghiêm túc khắc phục nên mình sẽ dành thời gian
-                                    hợp lý song song với việc học code để bổ sung thêm kiến thức về Tiếng Anh. Mục tiêu là có thể đọc hiểu các tài liệu
-                                    về Tiếng Anh chuyên ngành.
-                                </p>
-                            </div>
+							<div class="sub-item">
+								<h2 class="icon-title">
+									<img
+										src="./assets/imgs/icons/movie.png"
+										alt=""
+									/>
+									Xem phim
+								</h2>
+								<a href="https://youtu.be/JJL8TcGRs28"
+									><div class="entertain">
+										<div
+											class="avatar"
+											style="
+												background-image: url('./assets/imgs/entertain/cuocChienCuaRong.jpg');
+											"
+										></div>
+										<div class="content">
+											<h3>Cuộc Chiến Của Rồng</h3>
+											<p>
+												Đây là bộ phim khoa học viễn
+												tưởng. Lấy bối cảnh là thành phố
+												Los Angeles bỗng nhiên bị rúng
+												động bởi sự tấn công từ một loài
+												quái thú khổng lồ tựa như rồng.
+												Trong cuộc hỗn loạn đó, chàng
+												trai phóng viên truyền hình
+												Ethan chợt nhận ra thân phận
+												kiếp trước mình chính là một
+												chiến binh.Và giờ đây, nhiệm vụ
+												của anh không có gì khác hơn là
+												phải đứng ra bảo vệ mọi người.
+											</p>
+										</div>
+									</div></a
+								>
 
-                            <div class="timeline">
-                                <h4 class="title">Thực hành</h4>
-                                <div class="time">Trong quá trình học</div>
-                                <p>
-                                    Trong quá trình học, mình sẽ áp dụng những kiến thức đã học và làm các project nhỏ để rèn luyện
-                                    thêm kỹ năng, từ đó rút ra những kinh nghiệm và khắc phục những thiếu sót của bản thân.
-                                </p>
-                            </div>
+								<a
+									href="https://phimdacap.com/xem-phim-de-che-maya-apocalypto-thuyet-minh-111916.html"
+									><div class="entertain">
+										<div
+											class="avatar"
+											style="
+												background-image: url('./assets/imgs/entertain/deCheMaya.jpg');
+											"
+										></div>
+										<div class="content">
+											<h3>Đế Chế Maya</h3>
+											<p>
+												Lấy bối cảnh ở thế kỷ XVI,
+												chuyện phim Apocalypto kể về
+												cuộc sống bình yên của bộ tộc
+												Maya bỗng chốc trở nên hoang tàn
+												khi một toán lính thiện chiến ập
+												đến bắt họ về để tế thần.Jaguar
+												Paw, chàng thổ dân dũng cảm và
+												cũng có mặt trong đám người xấu
+												số sắp lên đàn hiến tế. Tình thế
+												ngàn cân treo sợi tóc buộc anh
+												phải hành động để cứu lấy dân
+												làng và những người mình yêu
+												thương.
+											</p>
+										</div>
+									</div></a
+								>
 
-                        </div>
+								<a href="https://youtu.be/hDuttHj9WWw"
+									><div class="entertain">
+										<div
+											class="avatar"
+											style="
+												background-image: url('./assets/imgs/entertain/chienLang.jpg');
+											"
+										></div>
+										<div class="content">
+											<h3>Chiến Lang</h3>
+											<p>
+												Vương Lãnh Phong, một người lính
+												sẵn sàng xông pha trận mạc.
+												Nhưng sau lần cãi lời chỉ huy và
+												bắn chết một phần tử khủng bố,
+												anh bị khai trừ khỏi quân đội.
+												Kẻ bị đánh chết vốn là em trai
+												của tên trùm ma túy Mẫn Đăng. Để
+												trả thù, hắn kết hợp với tên
+												lính đánh thuê Lão Miêu để sát
+												hại Lãnh Phong và những người
+												đồng đội của anh...
+											</p>
+										</div>
+									</div></a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                        <div class="sub-item">
-                            <h2 class="small-title">Khi ổn định kiến thức</h2>
-                            <div class="timeline">
-                                <h4 class="title">Đi thực tập</h4>
-                                <div class="time">Khi ổn định kiến thức</div>
-                                <p>Sau khi đã nắm được đủ lượng kiến thức nền tảng, mình sẽ xin đi thực tập thực tế tại các công ty. Việc đi thực tập
-                                    sẽ là cơ hội giúp mình va chạm và rắn rỏi hơn, hiểu rõ hơn về cách làm việc trong môi trường doanh nghiệp từ đó cũng sẽ 
-                                    giúp mình đúc kết ra những kinh nghiệm và khắc phục những thiếu sót của bản thân.
-                                </p>
-                            </div>
+		<div class="shape circle"></div>
+		<div class="shape square"></div>
+		<div class="shape star"></div>
+		<div class="shape heart"></div>
 
-                        </div>
-                    </div>
+		<popup id="popup">
+			<div id="closeBtn"><i class="fa-solid fa-xmark"></i></div>
+			<div class="popup-name">
+				<marquee scrollamount="3"
+					>Người anh sinh năm 96 học Cơ Khí - Bách Khoa</marquee
+				>
+			</div>
+			<div class="popup-control">
+				<div class="control">
+					<i class="fa-solid fa-backward-step"></i>
+				</div>
+				<div class="control active" id="playBtn">
+					<i class="fa-solid fa-play"></i>
+				</div>
+				<div class="control">
+					<i class="fa-solid fa-forward-step"></i>
+				</div>
+			</div>
+		</popup>
 
-                    <!-- Sở thích -->
-                    <div class="content-item favourite">
-                        <div class="sub-item">
-                            <h1 class="big-title">Sở thích</h1>
-                            <h2 class="icon-title">
-                                <img src="./assets/imgs/icons/game.png" alt="">
-                                Chơi game
-                            </h2>
-                            <a href="https://lienquan.garena.vn/"><div class="entertain">
-                                <div class="avatar" style="background-image: url('./assets/imgs/entertain/lqm.jpg')"></div>
-                                <div class="content">
-                                    <h3>Liên Quân Mobile</h3>
-                                    <p>Liên quân mobile là tựa game moba trên nền tảng di động rất phổ biến và được ưa chuộng
-                                        tại Việt Nam. Tựa game này mang tính chiến thuật và giải trí cao, song cũng rất dễ gây
-                                        trầm cảm ... :')
-                                    </p>
-                                </div>
-                            </div></a>
-                            <a href="https://pubgm.zing.vn/"><div class="entertain">
-                                <div class="avatar" style="background-image: url('./assets/imgs/entertain/pubgm.jpg')"></div>
-                                <div class="content">
-                                    <h3>Pubg Mobile</h3>
-                                    <p>Pubg Mobile là game sinh tồn bắn súng fps trên di động, trò chơi này không dành cho người có
-                                        tiền sử bệnh tim.. và nếu bạn muốn thử cảm giác hóa thân thành những chú rắn thì hãy thử
-                                        trò chơi này.
-                                    </p>
-                                </div>
-                            </div></a>
-                            <a href="http://aumobile.vn/"><div class="entertain">
-                                <div class="avatar" style="background-image: url('./assets/imgs/entertain/auMobile.png')"></div>
-                                <div class="content">
-                                    <h3>Au Mobile</h3>
-                                    <p>Tựa game thời trang nhảy nhót, lắc cái đầu để cho sạch gầu...
-                                    
-                                    </p>
-                                </div>
-                            </div></a>
-
-                        </div>
-
-                        <div class="sub-item">
-                            <h2 class="icon-title">
-                                <img src="./assets/imgs/icons/movie.png" alt="">
-                                Xem phim
-                            </h2>
-                            <a href="https://youtu.be/JJL8TcGRs28"><div class="entertain">
-                                <div class="avatar" style="background-image: url('./assets/imgs/entertain/cuocChienCuaRong.jpg')"></div>
-                                <div class="content">
-                                    <h3>Cuộc Chiến Của Rồng</h3>
-                                    <p>Đây là bộ phim khoa học viễn tưởng. Lấy bối cảnh là thành phố Los Angeles bỗng nhiên bị rúng động bởi sự tấn công từ một loài quái thú khổng lồ tựa như rồng. Trong cuộc hỗn loạn đó, chàng trai phóng viên truyền hình Ethan chợt nhận ra thân phận kiếp trước mình chính là một chiến binh.Và giờ đây, nhiệm vụ của anh không có gì khác hơn là phải đứng ra bảo vệ mọi người.</p>
-                                </div>
-                            </div></a>
-
-                            <a href="https://phimdacap.com/xem-phim-de-che-maya-apocalypto-thuyet-minh-111916.html"><div class="entertain">
-                                <div class="avatar" style="background-image: url('./assets/imgs/entertain/deCheMaya.jpg')"></div>
-                                <div class="content">
-                                    <h3>Đế Chế Maya</h3>
-                                    <p>Lấy bối cảnh ở thế kỷ XVI, chuyện phim Apocalypto kể về cuộc sống bình yên của bộ tộc Maya bỗng chốc trở nên hoang tàn khi một toán lính thiện chiến ập đến bắt họ về để tế thần.Jaguar Paw, chàng thổ dân dũng cảm và cũng có mặt trong đám người xấu số sắp lên đàn hiến tế. Tình thế ngàn cân treo sợi tóc buộc anh phải hành động để cứu lấy dân làng và những người mình yêu thương.</p>
-                                </div>
-                            </div></a>
-
-                            <a href="https://youtu.be/hDuttHj9WWw"><div class="entertain">
-                                <div class="avatar" style="background-image: url('./assets/imgs/entertain/chienLang.jpg')"></div>
-                                <div class="content">
-                                    <h3>Chiến Lang</h3>
-                                    <p>Vương Lãnh Phong, một người lính sẵn sàng xông pha trận mạc. Nhưng sau lần cãi lời chỉ huy và bắn chết một phần tử khủng bố, anh bị khai trừ khỏi quân đội. Kẻ bị đánh chết vốn là em trai của tên trùm ma túy Mẫn Đăng. Để trả thù, hắn kết hợp với tên lính đánh thuê Lão Miêu để sát hại Lãnh Phong và những người đồng đội của anh...</p>
-                                </div>
-                            </div></a>
-
-                        </div>
-                        
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="shape circle"></div>
-    <div class="shape square"></div>
-    <div class="shape star"></div>
-    <div class="shape heart"></div>
-
-    <popup id="popup">
-        <div id="closeBtn"><i class="fa-solid fa-xmark"></i></div>
-        <div class="popup-name"><marquee scrollamount="3">Người anh sinh năm 96 học Cơ Khí - Bách Khoa</marquee></div>
-        <div class="popup-control">
-            <div class="control"><i class="fa-solid fa-backward-step"></i></div>
-            <div class="control active" id="playBtn"><i class="fa-solid fa-play"></i></div>
-            <div class="control"><i class="fa-solid fa-forward-step"></i></div>
-        </div>
-    </popup>
-
-    <script>
-        const aElements = document.links
-        Array.from(aElements).forEach(a => a.setAttribute('target', 'blank'))
-    </script>
-</body>
+		<script>
+			const aElements = document.links;
+			Array.from(aElements).forEach((a) =>
+				a.setAttribute("target", "blank")
+			);
+		</script>
+	</body>
 </html>
 
 <!-- nghiadx -->
